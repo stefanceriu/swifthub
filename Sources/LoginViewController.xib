@@ -28,6 +28,9 @@
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                             <state key="normal" title="Login"/>
+                            <connections>
+                                <action selector="onLoginButtonTapWithSender:" destination="-1" eventType="touchUpInside" id="TaW-7e-eDt"/>
+                            </connections>
                         </button>
                     </subviews>
                     <constraints>

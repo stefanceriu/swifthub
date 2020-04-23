@@ -12,9 +12,10 @@
 		189D8DF5245162C0004A12CA /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 189D8DEB245162C0004A12CA /* LoginViewController.xib */; };
 		189D8DF6245162C0004A12CA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189D8DEC245162C0004A12CA /* LoginViewController.swift */; };
 		189D8DF7245162C0004A12CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189D8DED245162C0004A12CA /* AppDelegate.swift */; };
-		189D8DF8245162C0004A12CA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189D8DEE245162C0004A12CA /* SceneDelegate.swift */; };
 		189D8DF9245162C0004A12CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 189D8DF0245162C0004A12CA /* Assets.xcassets */; };
 		189D8DFA245162C0004A12CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 189D8DF1245162C0004A12CA /* LaunchScreen.storyboard */; };
+		189D8DFD2451640E004A12CA /* ApplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189D8DFC2451640E004A12CA /* ApplicationController.swift */; };
+		189D8DFF24516A1F004A12CA /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189D8DFE24516A1F004A12CA /* AuthService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,10 +36,11 @@
 		189D8DEB245162C0004A12CA /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		189D8DEC245162C0004A12CA /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		189D8DED245162C0004A12CA /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		189D8DEE245162C0004A12CA /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		189D8DF0245162C0004A12CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		189D8DF2245162C0004A12CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		189D8DF3245162C0004A12CA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		189D8DFC2451640E004A12CA /* ApplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationController.swift; sourceTree = "<group>"; };
+		189D8DFE24516A1F004A12CA /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		8719A6369F03F9274E3793DF /* Pods-swifthub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swifthub.debug.xcconfig"; path = "Target Support Files/Pods-swifthub/Pods-swifthub.debug.xcconfig"; sourceTree = "<group>"; };
 		AA165A55FE7C8FF596B669D5 /* libPods-swifthub.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-swifthub.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEEA6F67BDE509E5AEF4FD1B /* Pods-swifthub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swifthub.release.xcconfig"; path = "Target Support Files/Pods-swifthub/Pods-swifthub.release.xcconfig"; sourceTree = "<group>"; };
@@ -97,9 +99,10 @@
 			isa = PBXGroup;
 			children = (
 				189D8DED245162C0004A12CA /* AppDelegate.swift */,
+				189D8DFC2451640E004A12CA /* ApplicationController.swift */,
+				189D8DFE24516A1F004A12CA /* AuthService.swift */,
 				189D8DEC245162C0004A12CA /* LoginViewController.swift */,
 				189D8DEB245162C0004A12CA /* LoginViewController.xib */,
-				189D8DEE245162C0004A12CA /* SceneDelegate.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -260,7 +263,8 @@
 			files = (
 				189D8DF7245162C0004A12CA /* AppDelegate.swift in Sources */,
 				189D8DF6245162C0004A12CA /* LoginViewController.swift in Sources */,
-				189D8DF8245162C0004A12CA /* SceneDelegate.swift in Sources */,
+				189D8DFD2451640E004A12CA /* ApplicationController.swift in Sources */,
+				189D8DFF24516A1F004A12CA /* AuthService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

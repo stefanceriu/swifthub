@@ -7,20 +7,29 @@
 //
 
 import UIKit
+import AuthenticationServices
 
-protocol LoginViewControllerDelegate {
+protocol LoginViewControllerDelegate: AnyObject {
     func loginViewControllerDidRequestLogin(_: LoginViewController)
 }
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, ASWebAuthenticationPresentationContextProviding {
     
-    var delegate: LoginViewControllerDelegate?
-
+    weak var delegate: LoginViewControllerDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-    private func onLoginButtonTap(sender: UIButton) {
+    // MARK: ASWebAuthenticationPresentationContextProviding
+    
+    func presentationAnchor(for session: ASWebAuthenticationSession) -> ASPresentationAnchor {
+        return self.view.window!
+    }
+    
+    // MARK: Private
+    
+    @IBAction private func onLoginButtonTap(sender: UIButton) {
         self.delegate?.loginViewControllerDidRequestLogin(self)
     }
 }
