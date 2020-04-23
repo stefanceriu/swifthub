@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import Alamofire
 
 class ApplicationController : LoginViewControllerDelegate {
+    
+    private let requestDispatcher: Session
     
     private let authService: AuthService
     private var serviceClient: ServiceClient?
@@ -20,7 +23,8 @@ class ApplicationController : LoginViewControllerDelegate {
     
     public init(windowScene: UIWindowScene) {
         
-        self.authService = AuthService()
+        self.requestDispatcher = Session.default
+        self.authService = AuthService(requestDispatcher: self.requestDispatcher)
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
         
@@ -41,7 +45,7 @@ class ApplicationController : LoginViewControllerDelegate {
         self.authService.requestLogin(presentationContextProvider: self.loginViewController) { (result) in
             switch result {
             case .success(let accessToken):
-                self.serviceClient = ServiceClient(accessToken: accessToken)
+                self.serviceClient = ServiceClient(requestDispatcher: self.requestDispatcher, accessToken: accessToken)
                 self.repositoryListViewController = RepositoryListViewController(RepositorySearchService(self.serviceClient!))
                 self.rootViewController.pushViewController(self.repositoryListViewController!, animated: true)
                 

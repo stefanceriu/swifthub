@@ -29,10 +29,15 @@ enum AuthServiceError: Error {
 
 class AuthService {
     
+    private let requestDispatcher: Session
     private var accessTokenRequest: DataRequest?
     private var webAutenticationSession: ASWebAuthenticationSession?
     
-    public func requestLogin(presentationContextProvider: ASWebAuthenticationPresentationContextProviding, result: @escaping (Result<String, AuthServiceError>) -> Void) {
+    init(requestDispatcher: Session) {
+        self.requestDispatcher = requestDispatcher
+    }
+    
+    func requestLogin(presentationContextProvider: ASWebAuthenticationPresentationContextProviding, result: @escaping (Result<String, AuthServiceError>) -> Void) {
     
         guard self.webAutenticationSession == nil && self.accessTokenRequest == nil else {
             print("Already processing request, ignoring.")
@@ -105,7 +110,7 @@ class AuthService {
                           clientIdParameterName: oauthClientID,
                           clientSecretParameterName: oauthClientSecret]
         
-        self.accessTokenRequest = AF.request(oauthAccessTokenEndpoint, method: .post, parameters: parameters, headers: ["Accept": "application/json"]).responseJSON(completionHandler: { (response) in
+        self.accessTokenRequest = self.requestDispatcher.request(oauthAccessTokenEndpoint, method: .post, parameters: parameters, headers: ["Accept": "application/json"]).responseJSON(completionHandler: { (response) in
             switch(response.result) {
             case .success(let value):
                 

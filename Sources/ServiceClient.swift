@@ -17,15 +17,17 @@ enum ServiceClientError: Error {
 
 class ServiceClient: RequestInterceptor {
     
+    let requestDispatcher: Session
     let accessToken: String
     
-    init(accessToken: String) {
+    init(requestDispatcher: Session, accessToken: String) {
+        self.requestDispatcher = requestDispatcher
         self.accessToken = accessToken
     }
     
     public func requestUserRepositories(result: @escaping (Result<[[String: Any]], ServiceClientError>) -> Void) {
         
-        AF.request(userRepoPath, headers: ["Accept": "application/json"], interceptor: self).responseJSON(completionHandler: { (response) in
+        self.requestDispatcher.request(userRepoPath, headers: ["Accept": "application/json"], interceptor: self).responseJSON(completionHandler: { (response) in
             switch(response.result) {
             case .success(let value):
                 
