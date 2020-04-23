@@ -53,12 +53,12 @@ class RepositoryListViewController: UIViewController, UITableViewDataSource, UIT
         cell.titleLabel.text = searchResultItem.name;
         cell.authorLabel.text = searchResultItem.owner.login
         
-        let avatarURLRequest = URLRequest(url: searchResultItem.owner.avatarURL)
+        let avatarURLRequest = URLRequest(url: searchResultItem.owner.avatarUrl)
         
         if let image = self.imageCache.image(for: avatarURLRequest) {
             cell.avatarImageView.image = image
         } else {
-            AF.request(searchResultItem.owner.avatarURL).responseImage { [weak self] response in
+            AF.request(searchResultItem.owner.avatarUrl).responseImage { [weak self] response in
                 if case .success(let image) = response.result {
                     self?.imageCache.add(image, for: avatarURLRequest)
                     self?.tableView.reloadRows(at: [indexPath], with: .fade)

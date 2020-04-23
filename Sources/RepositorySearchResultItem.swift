@@ -10,12 +10,7 @@ import Foundation
 
 struct RepositorySearchResultOwner: Codable {
     var login: String
-    var avatarURL: URL
-    
-    enum CodingKeys: String, CodingKey {
-        case login
-        case avatarURL = "avatar_url"
-    }
+    var avatarUrl: URL
 }
 
 struct RepositorySearchResultItem : Codable {

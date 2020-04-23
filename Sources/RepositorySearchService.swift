@@ -20,7 +20,11 @@ protocol RepositorySearchServiceDelegate : AnyObject {
 class RepositorySearchService {
     
     private let serviceClient: ServiceClient
-    private let decoder = JSONDecoder()
+    private let decoder : JSONDecoder = {
+        let decoder = JSONDecoder()
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
+        return decoder
+    }()
     
     weak var delegate: RepositorySearchServiceDelegate?
     var searchResults: [RepositorySearchResultItem]
@@ -35,16 +39,9 @@ class RepositorySearchService {
             switch innerResult {
             case .success(let results):
                 do {
-                    var items: [RepositorySearchResultItem] = []
-                    
-                    for result in results {
-                        let jsonData = try JSONSerialization.data(withJSONObject: result, options: [])
-                        let item = try self.decoder.decode(RepositorySearchResultItem.self, from: jsonData)
-                        items.append(item)
-                    }
-                    
+                    let jsonData = try JSONSerialization.data(withJSONObject: results, options: [])
+                    let items = try self.decoder.decode([RepositorySearchResultItem].self, from: jsonData)
                     self.searchResults = items.sorted(by: {$0.name < $1.name})
-                    
                     self.delegate?.searchServiceDidFinishSearching()
                 }
                 catch {
