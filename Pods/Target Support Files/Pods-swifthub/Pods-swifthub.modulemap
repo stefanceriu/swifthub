@@ -1,0 +1,6 @@
+module Pods_swifthub {
+  umbrella header "Pods-swifthub-umbrella.h"
+
+  export *
+  module * { export * }
+}
