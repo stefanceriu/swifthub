@@ -33,7 +33,7 @@ class AuthService {
     private var accessTokenRequest: DataRequest?
     private var webAutenticationSession: ASWebAuthenticationSession?
     
-    public func requestLogin(presentationContextProvider: ASWebAuthenticationPresentationContextProviding, result:@escaping(Result<String, AuthServiceError>) -> Void) {
+    public func requestLogin(presentationContextProvider: ASWebAuthenticationPresentationContextProviding, result: @escaping (Result<String, AuthServiceError>) -> Void) {
     
         guard self.webAutenticationSession == nil && self.accessTokenRequest == nil else {
             print("Already processing request, ignoring.")

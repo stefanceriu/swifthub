@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		040F05867B62A1C66912F376 /* libPods-swifthub.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AA165A55FE7C8FF596B669D5 /* libPods-swifthub.a */; };
+		186B56F924518FE60097AB3D /* ServiceClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186B56F824518FE60097AB3D /* ServiceClient.swift */; };
+		186B56FC245190420097AB3D /* RepositoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186B56FA245190420097AB3D /* RepositoryListViewController.swift */; };
+		186B56FD245190420097AB3D /* RepositoryListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 186B56FB245190420097AB3D /* RepositoryListViewController.xib */; };
+		186B56FF245193290097AB3D /* RepositorySearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186B56FE245193290097AB3D /* RepositorySearchService.swift */; };
+		186B5702245195A80097AB3D /* RepositoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186B5700245195A80097AB3D /* RepositoryTableViewCell.swift */; };
+		186B5703245195A80097AB3D /* RepositoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 186B5701245195A80097AB3D /* RepositoryTableViewCell.xib */; };
 		189D8DDB24515C2F004A12CA /* swifthubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189D8DDA24515C2F004A12CA /* swifthubTests.swift */; };
 		189D8DF5245162C0004A12CA /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 189D8DEB245162C0004A12CA /* LoginViewController.xib */; };
 		189D8DF6245162C0004A12CA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189D8DEC245162C0004A12CA /* LoginViewController.swift */; };
@@ -16,6 +22,7 @@
 		189D8DFA245162C0004A12CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 189D8DF1245162C0004A12CA /* LaunchScreen.storyboard */; };
 		189D8DFD2451640E004A12CA /* ApplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189D8DFC2451640E004A12CA /* ApplicationController.swift */; };
 		189D8DFF24516A1F004A12CA /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189D8DFE24516A1F004A12CA /* AuthService.swift */; };
+		18F8CBC62451A66400CBA71A /* RepositorySearchResultItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F8CBC52451A66400CBA71A /* RepositorySearchResultItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +36,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		186B56F824518FE60097AB3D /* ServiceClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceClient.swift; sourceTree = "<group>"; };
+		186B56FA245190420097AB3D /* RepositoryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryListViewController.swift; sourceTree = "<group>"; };
+		186B56FB245190420097AB3D /* RepositoryListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryListViewController.xib; sourceTree = "<group>"; };
+		186B56FE245193290097AB3D /* RepositorySearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositorySearchService.swift; sourceTree = "<group>"; };
+		186B5700245195A80097AB3D /* RepositoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTableViewCell.swift; sourceTree = "<group>"; };
+		186B5701245195A80097AB3D /* RepositoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryTableViewCell.xib; sourceTree = "<group>"; };
 		189D8DC024515C2E004A12CA /* swifthub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swifthub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		189D8DD624515C2F004A12CA /* swifthubTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = swifthubTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		189D8DDA24515C2F004A12CA /* swifthubTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swifthubTests.swift; sourceTree = "<group>"; };
@@ -41,6 +54,7 @@
 		189D8DF3245162C0004A12CA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		189D8DFC2451640E004A12CA /* ApplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationController.swift; sourceTree = "<group>"; };
 		189D8DFE24516A1F004A12CA /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		18F8CBC52451A66400CBA71A /* RepositorySearchResultItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositorySearchResultItem.swift; sourceTree = "<group>"; };
 		8719A6369F03F9274E3793DF /* Pods-swifthub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swifthub.debug.xcconfig"; path = "Target Support Files/Pods-swifthub/Pods-swifthub.debug.xcconfig"; sourceTree = "<group>"; };
 		AA165A55FE7C8FF596B669D5 /* libPods-swifthub.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-swifthub.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEEA6F67BDE509E5AEF4FD1B /* Pods-swifthub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swifthub.release.xcconfig"; path = "Target Support Files/Pods-swifthub/Pods-swifthub.release.xcconfig"; sourceTree = "<group>"; };
@@ -101,8 +115,15 @@
 				189D8DED245162C0004A12CA /* AppDelegate.swift */,
 				189D8DFC2451640E004A12CA /* ApplicationController.swift */,
 				189D8DFE24516A1F004A12CA /* AuthService.swift */,
+				186B56F824518FE60097AB3D /* ServiceClient.swift */,
+				186B56FE245193290097AB3D /* RepositorySearchService.swift */,
+				18F8CBC52451A66400CBA71A /* RepositorySearchResultItem.swift */,
 				189D8DEC245162C0004A12CA /* LoginViewController.swift */,
 				189D8DEB245162C0004A12CA /* LoginViewController.xib */,
+				186B56FA245190420097AB3D /* RepositoryListViewController.swift */,
+				186B56FB245190420097AB3D /* RepositoryListViewController.xib */,
+				186B5700245195A80097AB3D /* RepositoryTableViewCell.swift */,
+				186B5701245195A80097AB3D /* RepositoryTableViewCell.xib */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -216,6 +237,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				186B5703245195A80097AB3D /* RepositoryTableViewCell.xib in Resources */,
+				186B56FD245190420097AB3D /* RepositoryListViewController.xib in Resources */,
 				189D8DFA245162C0004A12CA /* LaunchScreen.storyboard in Resources */,
 				189D8DF5245162C0004A12CA /* LoginViewController.xib in Resources */,
 				189D8DF9245162C0004A12CA /* Assets.xcassets in Resources */,
@@ -261,8 +284,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				186B56F924518FE60097AB3D /* ServiceClient.swift in Sources */,
+				186B56FF245193290097AB3D /* RepositorySearchService.swift in Sources */,
 				189D8DF7245162C0004A12CA /* AppDelegate.swift in Sources */,
+				186B5702245195A80097AB3D /* RepositoryTableViewCell.swift in Sources */,
+				186B56FC245190420097AB3D /* RepositoryListViewController.swift in Sources */,
 				189D8DF6245162C0004A12CA /* LoginViewController.swift in Sources */,
+				18F8CBC62451A66400CBA71A /* RepositorySearchResultItem.swift in Sources */,
 				189D8DFD2451640E004A12CA /* ApplicationController.swift in Sources */,
 				189D8DFF24516A1F004A12CA /* AuthService.swift in Sources */,
 			);

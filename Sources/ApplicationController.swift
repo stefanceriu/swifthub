@@ -10,10 +10,13 @@ import UIKit
 
 class ApplicationController : LoginViewControllerDelegate {
     
-    private let window: UIWindow
-    private let loginViewController: LoginViewController
-    
     private let authService: AuthService
+    private var serviceClient: ServiceClient?
+    
+    private let window: UIWindow
+    private let rootViewController: UINavigationController
+    private let loginViewController: LoginViewController
+    private var repositoryListViewController: RepositoryListViewController?
     
     public init(windowScene: UIWindowScene) {
         
@@ -22,11 +25,14 @@ class ApplicationController : LoginViewControllerDelegate {
         self.window = UIWindow(frame: UIScreen.main.bounds)
         
         self.loginViewController = LoginViewController()
+        self.rootViewController = UINavigationController(rootViewController: self.loginViewController)
+        self.rootViewController.isNavigationBarHidden = true
+        
         self.loginViewController.delegate = self
         
-        self.window.rootViewController = self.loginViewController
+        self.window.rootViewController = self.rootViewController
+        self.window.windowScene = windowScene
         self.window.makeKeyAndVisible()
-        window.windowScene = windowScene
     }
     
     // MARK: LoginViewControllerDelegate
@@ -35,7 +41,10 @@ class ApplicationController : LoginViewControllerDelegate {
         self.authService.requestLogin(presentationContextProvider: self.loginViewController) { (result) in
             switch result {
             case .success(let accessToken):
-                print("Received access token: \(accessToken)")
+                self.serviceClient = ServiceClient(accessToken: accessToken)
+                self.repositoryListViewController = RepositoryListViewController(RepositorySearchService(self.serviceClient!))
+                self.rootViewController.pushViewController(self.repositoryListViewController!, animated: true)
+                
             case .failure(let error):
                 print("Failed logging in with error: \(error)")
             }
