@@ -9,7 +9,7 @@
 import Foundation
 import Alamofire
 
-let userRepoPath = "https://api.github.com/user/repos"
+private let userRepoPath = "https://api.github.com/user/repos"
 
 enum ServiceClientError: Error {
     case genericError(String)

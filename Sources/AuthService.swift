@@ -10,23 +10,22 @@ import UIKit
 import Alamofire
 import AuthenticationServices
 
-let oauthAuthorizationEndpoint = "https://github.com/login/oauth/authorize"
-let oauthAccessTokenEndpoint = "https://github.com/login/oauth/access_token"
+private let oauthAuthorizationEndpoint = "https://github.com/login/oauth/authorize"
+private let oauthAccessTokenEndpoint = "https://github.com/login/oauth/access_token"
 
-let oauthClientID = <#T##String#>
-let oauthClientSecret = <#T##String#>
+let oauthClientID = <#T##oauthClientID#>
+let oauthClientSecret = <#T##oauthClientSecret#>
 
-let clientIdParameterName = "client_id"
-let clientSecretParameterName = "client_secret"
-let stateParameterName = "state"
-let temporaryCodeParameterName = "code"
-let accessTokenParameterName = "access_token"
+private let clientIdParameterName = "client_id"
+private let clientSecretParameterName = "client_secret"
+private let stateParameterName = "state"
+private let temporaryCodeParameterName = "code"
+private let accessTokenParameterName = "access_token"
 
 enum AuthServiceError: Error {
     case clientError(String)
     case invalidResponse(String)
 }
-
 
 class AuthService {
     
