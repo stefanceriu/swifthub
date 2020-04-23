@@ -14,7 +14,8 @@
 		186B56FF245193290097AB3D /* RepositorySearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186B56FE245193290097AB3D /* RepositorySearchService.swift */; };
 		186B5702245195A80097AB3D /* RepositoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186B5700245195A80097AB3D /* RepositoryTableViewCell.swift */; };
 		186B5703245195A80097AB3D /* RepositoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 186B5701245195A80097AB3D /* RepositoryTableViewCell.xib */; };
-		189D8DDB24515C2F004A12CA /* swifthubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189D8DDA24515C2F004A12CA /* swifthubTests.swift */; };
+		187316582451DB9200BE46F7 /* ServiceClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186B56F824518FE60097AB3D /* ServiceClient.swift */; };
+		189D8DDB24515C2F004A12CA /* ServiceClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189D8DDA24515C2F004A12CA /* ServiceClientTests.swift */; };
 		189D8DF5245162C0004A12CA /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 189D8DEB245162C0004A12CA /* LoginViewController.xib */; };
 		189D8DF6245162C0004A12CA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189D8DEC245162C0004A12CA /* LoginViewController.swift */; };
 		189D8DF7245162C0004A12CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189D8DED245162C0004A12CA /* AppDelegate.swift */; };
@@ -23,10 +24,11 @@
 		189D8DFD2451640E004A12CA /* ApplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189D8DFC2451640E004A12CA /* ApplicationController.swift */; };
 		189D8DFF24516A1F004A12CA /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189D8DFE24516A1F004A12CA /* AuthService.swift */; };
 		18F8CBC62451A66400CBA71A /* RepositorySearchResultItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F8CBC52451A66400CBA71A /* RepositorySearchResultItem.swift */; };
+		67C907C8B866638DBDC4BD53 /* libPods-swifthubTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A02A4542B201D1D0DE83C9F /* libPods-swifthubTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		189D8DD724515C2F004A12CA /* PBXContainerItemProxy */ = {
+		187316552451DAA100BE46F7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 189D8DB824515C2E004A12CA /* Project object */;
 			proxyType = 1;
@@ -42,9 +44,10 @@
 		186B56FE245193290097AB3D /* RepositorySearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositorySearchService.swift; sourceTree = "<group>"; };
 		186B5700245195A80097AB3D /* RepositoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTableViewCell.swift; sourceTree = "<group>"; };
 		186B5701245195A80097AB3D /* RepositoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryTableViewCell.xib; sourceTree = "<group>"; };
+		187316592451DC4800BE46F7 /* swifthub.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = swifthub.entitlements; sourceTree = "<group>"; };
 		189D8DC024515C2E004A12CA /* swifthub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swifthub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		189D8DD624515C2F004A12CA /* swifthubTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = swifthubTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		189D8DDA24515C2F004A12CA /* swifthubTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swifthubTests.swift; sourceTree = "<group>"; };
+		189D8DDA24515C2F004A12CA /* ServiceClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceClientTests.swift; sourceTree = "<group>"; };
 		189D8DDC24515C2F004A12CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		189D8DEB245162C0004A12CA /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		189D8DEC245162C0004A12CA /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -55,9 +58,12 @@
 		189D8DFC2451640E004A12CA /* ApplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationController.swift; sourceTree = "<group>"; };
 		189D8DFE24516A1F004A12CA /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		18F8CBC52451A66400CBA71A /* RepositorySearchResultItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositorySearchResultItem.swift; sourceTree = "<group>"; };
+		337736C5F877C56CB631F7C0 /* Pods-swifthubTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swifthubTests.debug.xcconfig"; path = "Target Support Files/Pods-swifthubTests/Pods-swifthubTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6A02A4542B201D1D0DE83C9F /* libPods-swifthubTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-swifthubTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8719A6369F03F9274E3793DF /* Pods-swifthub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swifthub.debug.xcconfig"; path = "Target Support Files/Pods-swifthub/Pods-swifthub.debug.xcconfig"; sourceTree = "<group>"; };
 		AA165A55FE7C8FF596B669D5 /* libPods-swifthub.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-swifthub.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEEA6F67BDE509E5AEF4FD1B /* Pods-swifthub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swifthub.release.xcconfig"; path = "Target Support Files/Pods-swifthub/Pods-swifthub.release.xcconfig"; sourceTree = "<group>"; };
+		E33EA51E27280D33FC486024 /* Pods-swifthubTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swifthubTests.release.xcconfig"; path = "Target Support Files/Pods-swifthubTests/Pods-swifthubTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67C907C8B866638DBDC4BD53 /* libPods-swifthubTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,7 +110,7 @@
 		189D8DD924515C2F004A12CA /* swifthubTests */ = {
 			isa = PBXGroup;
 			children = (
-				189D8DDA24515C2F004A12CA /* swifthubTests.swift */,
+				189D8DDA24515C2F004A12CA /* ServiceClientTests.swift */,
 				189D8DDC24515C2F004A12CA /* Info.plist */,
 			);
 			path = swifthubTests;
@@ -134,6 +141,7 @@
 				189D8DF0245162C0004A12CA /* Assets.xcassets */,
 				189D8DF3245162C0004A12CA /* Info.plist */,
 				189D8DF1245162C0004A12CA /* LaunchScreen.storyboard */,
+				187316592451DC4800BE46F7 /* swifthub.entitlements */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -143,6 +151,8 @@
 			children = (
 				8719A6369F03F9274E3793DF /* Pods-swifthub.debug.xcconfig */,
 				AEEA6F67BDE509E5AEF4FD1B /* Pods-swifthub.release.xcconfig */,
+				337736C5F877C56CB631F7C0 /* Pods-swifthubTests.debug.xcconfig */,
+				E33EA51E27280D33FC486024 /* Pods-swifthubTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -151,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				AA165A55FE7C8FF596B669D5 /* libPods-swifthub.a */,
+				6A02A4542B201D1D0DE83C9F /* libPods-swifthubTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -180,6 +191,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 189D8DE224515C2F004A12CA /* Build configuration list for PBXNativeTarget "swifthubTests" */;
 			buildPhases = (
+				A5E6F98E5CB39897BBD1AA8A /* [CP] Check Pods Manifest.lock */,
 				189D8DD224515C2F004A12CA /* Sources */,
 				189D8DD324515C2F004A12CA /* Frameworks */,
 				189D8DD424515C2F004A12CA /* Resources */,
@@ -187,7 +199,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				189D8DD824515C2F004A12CA /* PBXTargetDependency */,
+				187316562451DAA100BE46F7 /* PBXTargetDependency */,
 			);
 			name = swifthubTests;
 			productName = swifthubTests;
@@ -277,6 +289,28 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		A5E6F98E5CB39897BBD1AA8A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-swifthubTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -300,17 +334,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				189D8DDB24515C2F004A12CA /* swifthubTests.swift in Sources */,
+				187316582451DB9200BE46F7 /* ServiceClient.swift in Sources */,
+				189D8DDB24515C2F004A12CA /* ServiceClientTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		189D8DD824515C2F004A12CA /* PBXTargetDependency */ = {
+		187316562451DAA100BE46F7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 189D8DBF24515C2E004A12CA /* swifthub */;
-			targetProxy = 189D8DD724515C2F004A12CA /* PBXContainerItemProxy */;
+			targetProxy = 187316552451DAA100BE46F7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -444,7 +479,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8719A6369F03F9274E3793DF /* Pods-swifthub.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "${inherited}";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Resources/swifthub.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -453,6 +491,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.stefanceriu.swifthub;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -462,7 +501,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AEEA6F67BDE509E5AEF4FD1B /* Pods-swifthub.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "${inherited}";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Resources/swifthub.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -471,6 +513,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.stefanceriu.swifthub;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -478,8 +521,9 @@
 		};
 		189D8DE324515C2F004A12CA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 337736C5F877C56CB631F7C0 /* Pods-swifthubTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "${inherited}";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = swifthubTests/Info.plist;
@@ -499,8 +543,9 @@
 		};
 		189D8DE424515C2F004A12CA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E33EA51E27280D33FC486024 /* Pods-swifthubTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "${inherited}";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = swifthubTests/Info.plist;

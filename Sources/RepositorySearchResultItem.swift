@@ -8,12 +8,12 @@
 
 import Foundation
 
-struct RepositorySearchResultOwner: Codable {
+struct RepositorySearchResultOwner: Codable, Equatable {
     var login: String
     var avatarUrl: URL
 }
 
-struct RepositorySearchResultItem : Codable {
+struct RepositorySearchResultItem : Codable, Equatable {
     var name: String
     var owner: RepositorySearchResultOwner
 }

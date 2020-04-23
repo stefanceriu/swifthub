@@ -12,6 +12,7 @@ import Alamofire
 private let userRepoPath = "https://api.github.com/user/repos"
 
 enum ServiceClientError: Error {
+    case invalidResponseStructure(String)
     case genericError(String)
 }
 
@@ -32,7 +33,7 @@ class ServiceClient: RequestInterceptor {
             case .success(let value):
                 
                 guard let json = value as? [[String: Any]] else {
-                    result(.failure(ServiceClientError.genericError("Could not decode response json, aborting.")))
+                    result(.failure(ServiceClientError.invalidResponseStructure("Could not retrieve results list, aborting.")))
                     return
                 }
                 

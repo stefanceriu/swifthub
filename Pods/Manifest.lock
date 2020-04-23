@@ -2,20 +2,24 @@ PODS:
   - Alamofire (5.1.0)
   - AlamofireImage (4.1.0):
     - Alamofire (~> 5.1)
+  - Mocker (2.1.0)
 
 DEPENDENCIES:
   - Alamofire
   - AlamofireImage
+  - Mocker
 
 SPEC REPOS:
   https://cdn.cocoapods.org/:
     - Alamofire
     - AlamofireImage
+    - Mocker
 
 SPEC CHECKSUMS:
   Alamofire: 9d5c5f602928e512395b30950c5984eca840093c
   AlamofireImage: c4a2ba349885fb3064feb74d2e547bd42ce9be10
+  Mocker: 55f3d932b93e1568f3cf15bd697348c06fc676ee
 
-PODFILE CHECKSUM: 94e78f8478ae9b8716aac9497eb98edaaa978494
+PODFILE CHECKSUM: 0751bafcd8f006d87227c83c99f3a0110e4bdf30
 
 COCOAPODS: 1.9.0
